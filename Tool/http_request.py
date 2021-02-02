@@ -22,8 +22,3 @@ class Http_request:
         return response
 
 
-# if __name__ == "__main__":
-#     res = Http_request()
-#     loginpage_url = "https://demo.fastadmin.net/index/user/login.html"
-#     response = res.send_request(loginpage_url,methond="get")
-#     print(response)
