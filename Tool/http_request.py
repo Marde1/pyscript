@@ -27,13 +27,13 @@ if __name__ == "__main__":
     loginpage_response = res.send_request(loginpage_url,methond="get") #会话访问登录页面
     import re
     token = re.findall('<input type="hidden" name="__token__" value="(.*?)" />',loginpage_response.text) #获取登录页面中表单中的token
-    print(token)
-    data = {"url": "https://demo.fastadmin.net/index/user/index.html",
-            "account": "admin", "password": "123456", "keeplogin": "1", "__token__": token[0]}
-    login_response = res.send_request(loginpage_url,methond="post",data=data) #会话 登录
+    data = {
+            "account": "admin", "password": "12345678", "__token__": token[0]}
+    login_response = res.send_request(loginpage_url,methond="post",data=data,headers={'Content-Type':'application/json'}) #会话 登录
+    print(login_response.text)
     login_cookies = login_response.cookies # 获取登录后的cookies,后面的登录后页面访问需要
-    print(login_response)
+    # print(login_response)
     index_url = "https://demo.fastadmin.net/index/user/index.html"
     index_response = res.send_request(index_url,cookies=login_cookies) #传入登录后获取的cookies，访问首页
-    print(index_response.text)
+    # print(index_response.text)
 
