@@ -116,18 +116,18 @@ function html_escape(s) {
 <div class='heading'>
 <h1 style="font-family: Microsoft YaHei">登录的测试报告</h1>
 <p class='attribute'><strong>测试人员 : </strong> 小简</p>
-<p class='attribute'><strong>开始时间 : </strong> 2021-02-18 01:23:37</p>
-<p class='attribute'><strong>合计耗时 : </strong> 0:00:02.313331</p>
-<p class='attribute'><strong>测试结果 : </strong> 共 3，通过 3，通过率= 100.00%</p>
+<p class='attribute'><strong>开始时间 : </strong> 2021-02-20 21:08:33</p>
+<p class='attribute'><strong>合计耗时 : </strong> 0:00:02.486321</p>
+<p class='attribute'><strong>测试结果 : </strong> 共 3，通过 1，失败 2，通过率= 33.33%</p>
 
 <p class='description'></p>
 </div>
 
 
 <p id='show_detail_line'>
-<a class="btn btn-primary" href='javascript:showCase(0)'>概要{ 100.00% }</a>
-<a class="btn btn-danger" href='javascript:showCase(1)'>失败{ 0 }</a>
-<a class="btn btn-success" href='javascript:showCase(2)'>通过{ 3 }</a>
+<a class="btn btn-primary" href='javascript:showCase(0)'>概要{ 33.33% }</a>
+<a class="btn btn-danger" href='javascript:showCase(1)'>失败{ 2 }</a>
+<a class="btn btn-success" href='javascript:showCase(2)'>通过{ 1 }</a>
 <a class="btn btn-info" href='javascript:showCase(3)'>所有{ 3 }</a>
 </p>
 <table id='result_table' class="table table-condensed table-bordered table-hover">
@@ -148,27 +148,30 @@ function html_escape(s) {
     <td>详细</td>
 </tr>
 
-<tr class='passClass warning'>
+<tr class='failClass warning'>
     <td>TestCase.TestkeTangPadCase.KePadTestCase</td>
     <td class="text-center">3</td>
-    <td class="text-center">3</td>
-    <td class="text-center">0</td>
+    <td class="text-center">1</td>
+    <td class="text-center">2</td>
     <td class="text-center">0</td>
     <td class="text-center"><a href="javascript:showClassDetail('c1',3)" class="detail" id='c1'>详细</a></td>
 </tr>
 
-<tr id='pt1_1' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_login_error_password</div></td>
+<tr id='ft1_1' class='none'>
+    <td class='failCase'><div class='testcase'>test_1login_error_password</div></td>
     <td colspan='5' align='center'>
     <!--默认收起错误信息 -Findyou
-    <button id='btn_pt1_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_1'>通过</button>
-    <div id='div_pt1_1' class="collapse">  -->
+    <button id='btn_ft1_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_1'>失败</button>
+    <div id='div_ft1_1' class="collapse">  -->
     <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt1_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_1'>通过</button>
-    <div id='div_pt1_1' class="collapse in" align="left">
+    <button id='btn_ft1_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft1_1'>失败</button>
+    <div id='div_ft1_1' class="collapse in" align="left">
     <pre>
     
-pt1_1: test_login_error_password's error is '密码不正确' not found in '&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n&lt;head&gt;\n    &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;\n    &lt;title&gt;温馨提示&lt;/title&gt;\n    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;\n    &lt;link rel="shortcut icon" href="/assets/img/favicon.ico" /&gt;\n    &lt;style type="text/css"&gt;\n        *{box-sizing:border-box;margin:0;padding:0;font-family:Lantinghei SC,Open Sans,Arial,Hiragino Sans GB,Microsoft YaHei,"微软雅黑",STHeiti,WenQuanYi Micro Hei,SimSun,sans-serif;-webkit-font-smoothing:antialiased}\n        body{padding:70px 50px;background:#edf1f4;font-weight:400;font-size:1pc;-webkit-text-size-adjust:none;color:#333}\n        a{outline:0;color:#3498db;text-decoration:none;cursor:pointer}\n        .system-message{margin:20px auto;padding:50px 0px;background:#fff;box-shadow:0 0 30px hsla(0,0%,39%,.06);text-align:center;width:100%;border-radius:2px;}\n        .system-message h1{margin:0;margin-bottom:9pt;color:#444;font-weight:400;font-size:30px}\n        .system-message .jump,.system-message .image{margin:20px 0;padding:0;padding:10px 0;font-weight:400}\n        .system-message .jump{font-size:14px}\n        .system-message .jump a{color:#333}\n        .system-message p{font-size:9pt;line-height:20px}\n        .system-message .btn{display:inline-block;margin-right:10px;width:138px;height:2pc;border:1px solid #44a0e8;border-radius:30px;color:#44a0e8;text-align:center;font-size:1pc;line-height:2pc;margin-bottom:5px;}\n        .success .btn{border-color:#69bf4e;color:#69bf4e}\n        .error .btn{border-color:#ff8992;color:#ff8992}\n        .info .btn{border-color:#3498db;color:#3498db}\n        .copyright p{width:100%;color:#919191;text-align:center;font-size:10px}\n        .system-message .btn-grey{border-color:#bbb;color:#bbb}\n        .clearfix:after{clear:both;display:block;visibility:hidden;height:0;content:"."}\n        @media (max-width:768px){body {padding:20px;}}\n        @media (max-width:480px){.system-message h1{font-size:30px;}}\n    &lt;/style&gt;\n&lt;/head&gt;\n&lt;body&gt;\n&lt;div class="system-message success"&gt;\n    &lt;div class="image"&gt;\n        &lt;img src="/assets/img/success.svg" alt="" width="120" /&gt;\n    &lt;/div&gt;\n    &lt;h1&gt;你已经登录,请不要重复登录&lt;/h1&gt;\n            &lt;p class="jump"&gt;\n            页面将在 &lt;span id="wait"&gt;3&lt;/span&gt; 秒后自动跳转        &lt;/p&gt;\n        &lt;p class="clearfix"&gt;\n        &lt;a href="/" class="btn btn-grey"&gt;返回上一页&lt;/a&gt;\n                    &lt;a href="https://demo.fastadmin.net/index/user/index.html" class="btn btn-primary"&gt;立即跳转&lt;/a&gt;\n            &lt;/p&gt;\n&lt;/div&gt;\n    &lt;script type="text/javascript"&gt;\n        (function () {\n            var wait = document.getElementById(\'wait\');\n            var interval = setInterval(function () {\n                var time = --wait.innerHTML;\n                if (time &lt;= 0) {\n\t\t\t\t\tlocation.href = "https://demo.fastadmin.net/index/user/index.html";\n                    clearInterval(interval);\n                }\n            }, 1000);\n        })();\n    &lt;/script&gt;\n&lt;/body&gt;\n&lt;/html&gt;\n'
+ft1_1: Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\pyscript\TestCase\TestkeTangPadCase.py", line 40, in test_1login_error_password
+    self.assertIn("密码不正确",login_response.text)
+AssertionError: '密码不正确' not found in '&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n&lt;head&gt;\n    &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;\n    &lt;title&gt;温馨提示&lt;/title&gt;\n    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;\n    &lt;link rel="shortcut icon" href="/assets/img/favicon.ico" /&gt;\n    &lt;style type="text/css"&gt;\n        *{box-sizing:border-box;margin:0;padding:0;font-family:Lantinghei SC,Open Sans,Arial,Hiragino Sans GB,Microsoft YaHei,"微软雅黑",STHeiti,WenQuanYi Micro Hei,SimSun,sans-serif;-webkit-font-smoothing:antialiased}\n        body{padding:70px 50px;background:#edf1f4;font-weight:400;font-size:1pc;-webkit-text-size-adjust:none;color:#333}\n        a{outline:0;color:#3498db;text-decoration:none;cursor:pointer}\n        .system-message{margin:20px auto;padding:50px 0px;background:#fff;box-shadow:0 0 30px hsla(0,0%,39%,.06);text-align:center;width:100%;border-radius:2px;}\n        .system-message h1{margin:0;margin-bottom:9pt;color:#444;font-weight:400;font-size:30px}\n        .system-message .jump,.system-message .image{margin:20px 0;padding:0;padding:10px 0;font-weight:400}\n        .system-message .jump{font-size:14px}\n        .system-message .jump a{color:#333}\n        .system-message p{font-size:9pt;line-height:20px}\n        .system-message .btn{display:inline-block;margin-right:10px;width:138px;height:2pc;border:1px solid #44a0e8;border-radius:30px;color:#44a0e8;text-align:center;font-size:1pc;line-height:2pc;margin-bottom:5px;}\n        .success .btn{border-color:#69bf4e;color:#69bf4e}\n        .error .btn{border-color:#ff8992;color:#ff8992}\n        .info .btn{border-color:#3498db;color:#3498db}\n        .copyright p{width:100%;color:#919191;text-align:center;font-size:10px}\n        .system-message .btn-grey{border-color:#bbb;color:#bbb}\n        .clearfix:after{clear:both;display:block;visibility:hidden;height:0;content:"."}\n        @media (max-width:768px){body {padding:20px;}}\n        @media (max-width:480px){.system-message h1{font-size:30px;}}\n    &lt;/style&gt;\n&lt;/head&gt;\n&lt;body&gt;\n&lt;div class="system-message success"&gt;\n    &lt;div class="image"&gt;\n        &lt;img src="/assets/img/success.svg" alt="" width="120" /&gt;\n    &lt;/div&gt;\n    &lt;h1&gt;你已经登录,请不要重复登录&lt;/h1&gt;\n            &lt;p class="jump"&gt;\n            页面将在 &lt;span id="wait"&gt;3&lt;/span&gt; 秒后自动跳转        &lt;/p&gt;\n        &lt;p class="clearfix"&gt;\n        &lt;a href="/" class="btn btn-grey"&gt;返回上一页&lt;/a&gt;\n                    &lt;a href="https://demo.fastadmin.net/index/user/index.html" class="btn btn-primary"&gt;立即跳转&lt;/a&gt;\n            &lt;/p&gt;\n&lt;/div&gt;\n    &lt;script type="text/javascript"&gt;\n        (function () {\n            var wait = document.getElementById(\'wait\');\n            var interval = setInterval(function () {\n                var time = --wait.innerHTML;\n                if (time &lt;= 0) {\n\t\t\t\t\tlocation.href = "https://demo.fastadmin.net/index/user/index.html";\n                    clearInterval(interval);\n                }\n            }, 1000);\n        })();\n    &lt;/script&gt;\n&lt;/body&gt;\n&lt;/html&gt;\n'
 
 
     </pre>
@@ -176,37 +179,40 @@ pt1_1: test_login_error_password's error is '密码不正确' not found in '&lt;
     </td>
 </tr>
 
-<tr id='pt1_2' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_login_index</div></td>
-    <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
+<tr id='ft1_2' class='none'>
+    <td class='failCase'><div class='testcase'>test_2login_normal</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft1_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_2'>失败</button>
+    <div id='div_ft1_2' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft1_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft1_2'>失败</button>
+    <div id='div_ft1_2' class="collapse in" align="left">
+    <pre>
+    
+ft1_2: Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\pyscript\TestCase\TestkeTangPadCase.py", line 31, in test_2login_normal
+    self.assertIn("登录成功",login_response.text)
+AssertionError: '登录成功' not found in '&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n&lt;head&gt;\n    &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;\n    &lt;title&gt;温馨提示&lt;/title&gt;\n    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;\n    &lt;link rel="shortcut icon" href="/assets/img/favicon.ico" /&gt;\n    &lt;style type="text/css"&gt;\n        *{box-sizing:border-box;margin:0;padding:0;font-family:Lantinghei SC,Open Sans,Arial,Hiragino Sans GB,Microsoft YaHei,"微软雅黑",STHeiti,WenQuanYi Micro Hei,SimSun,sans-serif;-webkit-font-smoothing:antialiased}\n        body{padding:70px 50px;background:#edf1f4;font-weight:400;font-size:1pc;-webkit-text-size-adjust:none;color:#333}\n        a{outline:0;color:#3498db;text-decoration:none;cursor:pointer}\n        .system-message{margin:20px auto;padding:50px 0px;background:#fff;box-shadow:0 0 30px hsla(0,0%,39%,.06);text-align:center;width:100%;border-radius:2px;}\n        .system-message h1{margin:0;margin-bottom:9pt;color:#444;font-weight:400;font-size:30px}\n        .system-message .jump,.system-message .image{margin:20px 0;padding:0;padding:10px 0;font-weight:400}\n        .system-message .jump{font-size:14px}\n        .system-message .jump a{color:#333}\n        .system-message p{font-size:9pt;line-height:20px}\n        .system-message .btn{display:inline-block;margin-right:10px;width:138px;height:2pc;border:1px solid #44a0e8;border-radius:30px;color:#44a0e8;text-align:center;font-size:1pc;line-height:2pc;margin-bottom:5px;}\n        .success .btn{border-color:#69bf4e;color:#69bf4e}\n        .error .btn{border-color:#ff8992;color:#ff8992}\n        .info .btn{border-color:#3498db;color:#3498db}\n        .copyright p{width:100%;color:#919191;text-align:center;font-size:10px}\n        .system-message .btn-grey{border-color:#bbb;color:#bbb}\n        .clearfix:after{clear:both;display:block;visibility:hidden;height:0;content:"."}\n        @media (max-width:768px){body {padding:20px;}}\n        @media (max-width:480px){.system-message h1{font-size:30px;}}\n    &lt;/style&gt;\n&lt;/head&gt;\n&lt;body&gt;\n&lt;div class="system-message success"&gt;\n    &lt;div class="image"&gt;\n        &lt;img src="/assets/img/success.svg" alt="" width="120" /&gt;\n    &lt;/div&gt;\n    &lt;h1&gt;你已经登录,请不要重复登录&lt;/h1&gt;\n            &lt;p class="jump"&gt;\n            页面将在 &lt;span id="wait"&gt;3&lt;/span&gt; 秒后自动跳转        &lt;/p&gt;\n        &lt;p class="clearfix"&gt;\n        &lt;a href="/" class="btn btn-grey"&gt;返回上一页&lt;/a&gt;\n                    &lt;a href="https://demo.fastadmin.net/index/user/index.html" class="btn btn-primary"&gt;立即跳转&lt;/a&gt;\n            &lt;/p&gt;\n&lt;/div&gt;\n    &lt;script type="text/javascript"&gt;\n        (function () {\n            var wait = document.getElementById(\'wait\');\n            var interval = setInterval(function () {\n                var time = --wait.innerHTML;\n                if (time &lt;= 0) {\n\t\t\t\t\tlocation.href = "https://demo.fastadmin.net/index/user/index.html";\n                    clearInterval(interval);\n                }\n            }, 1000);\n        })();\n    &lt;/script&gt;\n&lt;/body&gt;\n&lt;/html&gt;\n'
+
+
+    </pre>
+    </div>
+    </td>
 </tr>
 
 <tr id='pt1_3' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_login_normal</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt1_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_3'>通过</button>
-    <div id='div_pt1_3' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt1_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_3'>通过</button>
-    <div id='div_pt1_3' class="collapse in" align="left">
-    <pre>
-    
-pt1_3: test_login_normal's error is '登录成功' not found in '&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n&lt;head&gt;\n    &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;\n    &lt;title&gt;温馨提示&lt;/title&gt;\n    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;\n    &lt;link rel="shortcut icon" href="/assets/img/favicon.ico" /&gt;\n    &lt;style type="text/css"&gt;\n        *{box-sizing:border-box;margin:0;padding:0;font-family:Lantinghei SC,Open Sans,Arial,Hiragino Sans GB,Microsoft YaHei,"微软雅黑",STHeiti,WenQuanYi Micro Hei,SimSun,sans-serif;-webkit-font-smoothing:antialiased}\n        body{padding:70px 50px;background:#edf1f4;font-weight:400;font-size:1pc;-webkit-text-size-adjust:none;color:#333}\n        a{outline:0;color:#3498db;text-decoration:none;cursor:pointer}\n        .system-message{margin:20px auto;padding:50px 0px;background:#fff;box-shadow:0 0 30px hsla(0,0%,39%,.06);text-align:center;width:100%;border-radius:2px;}\n        .system-message h1{margin:0;margin-bottom:9pt;color:#444;font-weight:400;font-size:30px}\n        .system-message .jump,.system-message .image{margin:20px 0;padding:0;padding:10px 0;font-weight:400}\n        .system-message .jump{font-size:14px}\n        .system-message .jump a{color:#333}\n        .system-message p{font-size:9pt;line-height:20px}\n        .system-message .btn{display:inline-block;margin-right:10px;width:138px;height:2pc;border:1px solid #44a0e8;border-radius:30px;color:#44a0e8;text-align:center;font-size:1pc;line-height:2pc;margin-bottom:5px;}\n        .success .btn{border-color:#69bf4e;color:#69bf4e}\n        .error .btn{border-color:#ff8992;color:#ff8992}\n        .info .btn{border-color:#3498db;color:#3498db}\n        .copyright p{width:100%;color:#919191;text-align:center;font-size:10px}\n        .system-message .btn-grey{border-color:#bbb;color:#bbb}\n        .clearfix:after{clear:both;display:block;visibility:hidden;height:0;content:"."}\n        @media (max-width:768px){body {padding:20px;}}\n        @media (max-width:480px){.system-message h1{font-size:30px;}}\n    &lt;/style&gt;\n&lt;/head&gt;\n&lt;body&gt;\n&lt;div class="system-message success"&gt;\n    &lt;div class="image"&gt;\n        &lt;img src="/assets/img/success.svg" alt="" width="120" /&gt;\n    &lt;/div&gt;\n    &lt;h1&gt;你已经登录,请不要重复登录&lt;/h1&gt;\n            &lt;p class="jump"&gt;\n            页面将在 &lt;span id="wait"&gt;3&lt;/span&gt; 秒后自动跳转        &lt;/p&gt;\n        &lt;p class="clearfix"&gt;\n        &lt;a href="/" class="btn btn-grey"&gt;返回上一页&lt;/a&gt;\n                    &lt;a href="https://demo.fastadmin.net/index/user/index.html" class="btn btn-primary"&gt;立即跳转&lt;/a&gt;\n            &lt;/p&gt;\n&lt;/div&gt;\n    &lt;script type="text/javascript"&gt;\n        (function () {\n            var wait = document.getElementById(\'wait\');\n            var interval = setInterval(function () {\n                var time = --wait.innerHTML;\n                if (time &lt;= 0) {\n\t\t\t\t\tlocation.href = "https://demo.fastadmin.net/index/user/index.html";\n                    clearInterval(interval);\n                }\n            }, 1000);\n        })();\n    &lt;/script&gt;\n&lt;/body&gt;\n&lt;/html&gt;\n'
-
-
-    </pre>
-    </div>
-    </td>
+    <td class='passCase'><div class='testcase'>test_3login_index</div></td>
+    <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
 </tr>
 
 <tr id='total_row' class="text-center active">
     <td>总计</td>
     <td>3</td>
-    <td>3</td>
+    <td>1</td>
+    <td>2</td>
     <td>0</td>
-    <td>0</td>
-    <td>通过率：100.00%</td>
+    <td>通过率：33.33%</td>
 </tr>
 </table>
 
