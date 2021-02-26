@@ -10,9 +10,9 @@ if __name__ == "__main__":
     loader = unittest.TestLoader()
     suite.addTest(loader.loadTestsFromTestCase(ToursTestCase))
 
-    with open("WebTouresResult.html",mode="wb") as resultFile:
+    with open("WebToursResult.html",mode="wb") as resultFile:
         runner = HTMLTestRunnerNew.HTMLTestRunner(resultFile,
                                                   verbosity=2,
-                                                  title="WebToures的测试报告",
+                                                  title="WebTours的测试报告",
                                                   description="主要是登录接口的功能自动化测试报告")
         runner.run(suite)
