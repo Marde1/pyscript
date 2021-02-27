@@ -13,9 +13,9 @@ class Http_request:
         """关闭会话"""
         self.res.close()
 
-    def send_request(self,url,params=None,data=None,headers=None,methond="get",cookies=None,verify=False):
+    def send_request(self,url,params=None,data=None,headers=None,method="get",cookies=None,verify=False):
 
-        if methond.lower()=="get":
+        if method.lower()=="get":
             response = self.res.get(url,params=params,headers=self.headers)
         else:
             response = self.res.post(url,data=data,headers=headers,cookies=cookies,verify=verify)
@@ -24,12 +24,12 @@ class Http_request:
 if __name__ == "__main__":
     res = Http_request() #实例化一个会话
     loginpage_url = "https://demo.fastadmin.net/index/user/login.html"
-    loginpage_response = res.send_request(loginpage_url,methond="get") #会话访问登录页面
+    loginpage_response = res.send_request(loginpage_url,method="get") #会话访问登录页面
     import re
     token = re.findall('<input type="hidden" name="__token__" value="(.*?)" />',loginpage_response.text) #获取登录页面中表单中的token
     data = {
             "account": "admin", "password": "12345678", "__token__": token[0]}
-    login_response = res.send_request(loginpage_url,methond="post",data=data,headers={'Content-Type':'application/json'}) #会话 登录
+    login_response = res.send_request(loginpage_url,method="post",data=data,headers={'Content-Type':'application/json'}) #会话 登录
     print(login_response.text)
     login_cookies = login_response.cookies # 获取登录后的cookies,后面的登录后页面访问需要
     # print(login_response)

@@ -11,7 +11,7 @@ class KePadTestCase(unittest.TestCase):
         self.login_url = "https://demo.fastadmin.net/index/user/login.html"
         self.index_url = "https://demo.fastadmin.net/index/user/index.html"
         self.req = Http_request()
-        loginpage_response = self.req.send_request(self.login_url, methond="get")
+        loginpage_response = self.req.send_request(self.login_url, method="get")
         # 获取登录页面中表单中的token
         tokens = re.findall('<input type="hidden" name="__token__" value="(.*?)" />',
                            loginpage_response.text)
@@ -19,7 +19,7 @@ class KePadTestCase(unittest.TestCase):
         #登录
         data = {"url": "https://demo.fastadmin.net/index/user/index.html",
                 "account": "admin", "password": "123456", "keeplogin": "1", "__token__": self.token}
-        login_response = self.req.send_request(self.login_url, data=data, methond="post")
+        login_response = self.req.send_request(self.login_url, data=data, method="post")
         self.cookies = login_response.cookies
         '''
         第二个用例使用第一条用例中的返回值之类的：
@@ -33,7 +33,7 @@ class KePadTestCase(unittest.TestCase):
 
         data = {"url": "https://demo.fastadmin.net/index/user/index.html",
                 "account": "admin", "password": "123456", "keeplogin": "1", "__token__": self.token}
-        login_response = self.req.send_request(self.login_url,data=data,methond="post",headers={'accept':'application/json'})
+        login_response = self.req.send_request(self.login_url,data=data,method="post",headers={'accept':'application/json'})
         # try:
         self.assertIn("登录成功",login_response.text)
         # except AssertionError as e:
@@ -42,7 +42,7 @@ class KePadTestCase(unittest.TestCase):
     def test_1login_error_password(self):  # 错误密码登录
         data = {"url": "https://demo.fastadmin.net/index/user/index.html",
                 "account": "admin", "password": "12345678", "keeplogin": "1", "__token__": self.token}
-        login_response = self.req.send_request(self.login_url, data=data, methond="post")
+        login_response = self.req.send_request(self.login_url, data=data, method="post")
         # try:
         self.assertIn("密码不正确",login_response.text)
         # except AssertionError as e:
@@ -50,7 +50,7 @@ class KePadTestCase(unittest.TestCase):
 
 
     def test_3login_index(self):#登录后访问个人中心
-        index_response = self.req.send_request(self.index_url,methond="get",cookies=self.cookies)
+        index_response = self.req.send_request(self.index_url,method="get",cookies=self.cookies)
 
     def tearDown(self):
         pass
