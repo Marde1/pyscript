@@ -24,7 +24,7 @@ class ToursTestCase(unittest.TestCase):
         super(ToursTestCase,self).__init__(methodName)
         self.req = Http_request()
         self.url = url
-        self.data = data
+        self.data = eval(data)
         self.expected = expected
         self.method = method
 
@@ -45,10 +45,10 @@ class ToursTestCase(unittest.TestCase):
         print("测试数据expected：{}".format(self.expected))
         print("测试数据method：{}".format(self.method))
         login_response = self.req.send_request(self.url,method=self.method,data=self.data)
-        print(login_response.text)
+        # print(login_response.text)
         login_list = re.findall('<frame src="(.*?)" name="info"',login_response.text)
         login_str = login_list[0]
-        print(login_list[0])
+        # print(login_list[0])
         try:
             self.assertEqual(login_str,self.expected)
         except AssertionError as e:
