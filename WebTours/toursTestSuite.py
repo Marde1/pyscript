@@ -18,7 +18,7 @@ if __name__ == "__main__":
     #通过初始化函数传参
     for item in testdata:
         #通过实例的方式加载用例
-        suite.addTest(ToursTestCase("test_api",item["url"],item["data"],item["expected"],item["method"]))
+        suite.addTest(ToursTestCase("test_api",item["url"],item["data"],item["expected"],item["method"],item["testcase_title"]))
 
     with open("WebToursResult.html",mode="wb") as resultFile:
         runner = HTMLTestRunnerNew.HTMLTestRunner(resultFile,

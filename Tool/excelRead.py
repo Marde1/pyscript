@@ -24,9 +24,10 @@ class ExcelRead():
                     data_dict[self.sheet.cell(1,j).value] = self.sheet.cell(i,j).value
                 # print(data_dict)
                 data_list.append(data_dict)
+                data_dict = {} #数据存入列表后清空字典，以便后面的数据存入
         return data_list
 
-# if __name__ == "__main__":
-#     excel = ExcelRead(r"C:\Users\hp\Desktop\pyscript\WebTours\webTour_data.xlsx","data")
-#     list01 = excel.readData()
-#     print(list01)
+if __name__ == "__main__":
+    excel = ExcelRead(r"C:\Users\hp\Desktop\pyscript\WebTours\webTour_data.xlsx","data")
+    list01 = excel.readData()
+    print(list01)
