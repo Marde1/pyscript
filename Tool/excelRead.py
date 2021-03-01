@@ -28,6 +28,6 @@ class ExcelRead():
         return data_list
 
 if __name__ == "__main__":
-    excel = ExcelRead(r"C:\Users\hp\Desktop\pyscript\WebTours\webTour_data.xlsx","data")
+    excel = ExcelRead(r"..\WebTours\webTour_data.xlsx","data")
     list01 = excel.readData()
     print(list01)
