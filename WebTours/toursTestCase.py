@@ -20,14 +20,17 @@ class ToursTestCase(unittest.TestCase):
     # login_url = "http://localhost:1080/cgi-bin/login.pl" #登录页面
 
 
-    def __init__(self,methodName,url,data,expected,method,testcase_title):
+    def __init__(self,methodName,testcase_id,function_module,testcase_title,method,url,data,expected):
         super(ToursTestCase,self).__init__(methodName)
         self.req = Http_request()
+        self.testcase_id = testcase_id
+        self.function_module = function_module
+        self.testcase_title = testcase_title
         self.url = url
         self.data = eval(data)
         self.expected = expected
         self.method = method
-        self.testcase_title = testcase_title
+
 
     def setUp(self):#每个测试用例的前置条件
         global userSession
@@ -42,6 +45,8 @@ class ToursTestCase(unittest.TestCase):
         #访问home页面，通过正则提取响应的html表单中的userSession
         # print(userSession)
         print()
+        print("测试用例编号:{}".format(self.testcase_id))
+        print("测试功能模块:{}".format(self.function_module))
         print("测试用例标题:{}".format(self.testcase_title))
         print("测试数据url:{}".format(self.url))
         print("测试数据data:{}".format(self.data))
