@@ -27,7 +27,7 @@ class ExcelRead():
                 data_dict = {} #数据存入列表后清空字典，以便后面的数据存入
         return data_list
 
-if __name__ == "__main__":
-    excel = ExcelRead(r"..\WebTours\webTour_data.xlsx","data")
-    list01 = excel.readData()
-    print(list01)
+# if __name__ == "__main__":
+#     excel = ExcelRead(r"..\WebTours\webTour_data.xlsx","data")
+#     list01 = excel.readData()
+#     print(list01)
