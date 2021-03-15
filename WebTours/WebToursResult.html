@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>WebTours的测试报告</title>
+    <title>WebTours登录接口测试DDT</title>
     <meta name="generator" content="HTMLTestRunner 0.8.2.2"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
@@ -114,20 +114,20 @@ function html_escape(s) {
 }
 </script>
 <div class='heading'>
-<h1 style="font-family: Microsoft YaHei">WebTours的测试报告</h1>
+<h1 style="font-family: Microsoft YaHei">WebTours登录接口测试DDT</h1>
 <p class='attribute'><strong>测试人员 : </strong> 小简</p>
-<p class='attribute'><strong>开始时间 : </strong> 2021-03-02 11:21:02</p>
-<p class='attribute'><strong>合计耗时 : </strong> 0:00:13.529235</p>
-<p class='attribute'><strong>测试结果 : </strong> 共 3，通过 3，通过率= 100.00%</p>
+<p class='attribute'><strong>开始时间 : </strong> 2021-03-15 11:26:33</p>
+<p class='attribute'><strong>合计耗时 : </strong> 0:00:06.782718</p>
+<p class='attribute'><strong>测试结果 : </strong> 共 3，错误 3，通过率= 0.00%</p>
 
-<p class='description'>主要是登录接口的功能自动化测试报告</p>
+<p class='description'></p>
 </div>
 
 
 <p id='show_detail_line'>
-<a class="btn btn-primary" href='javascript:showCase(0)'>概要{ 100.00% }</a>
+<a class="btn btn-primary" href='javascript:showCase(0)'>概要{ 0.00% }</a>
 <a class="btn btn-danger" href='javascript:showCase(1)'>失败{ 0 }</a>
-<a class="btn btn-success" href='javascript:showCase(2)'>通过{ 3 }</a>
+<a class="btn btn-success" href='javascript:showCase(2)'>通过{ 0 }</a>
 <a class="btn btn-info" href='javascript:showCase(3)'>所有{ 3 }</a>
 </p>
 <table id='result_table' class="table table-condensed table-bordered table-hover">
@@ -148,35 +148,30 @@ function html_escape(s) {
     <td>详细</td>
 </tr>
 
-<tr class='passClass warning'>
-    <td>WebTours.toursTestCase.ToursTestCase</td>
-    <td class="text-center">3</td>
+<tr class='errorClass warning'>
+    <td>WebTours.TestCaseDDT.TestCaseDDT</td>
     <td class="text-center">3</td>
     <td class="text-center">0</td>
     <td class="text-center">0</td>
+    <td class="text-center">3</td>
     <td class="text-center"><a href="javascript:showClassDetail('c1',3)" class="detail" id='c1'>详细</a></td>
 </tr>
 
-<tr id='pt1_1' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_api</div></td>
+<tr id='ft1_1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_api_1</div></td>
     <td colspan='5' align='center'>
     <!--默认收起错误信息 -Findyou
-    <button id='btn_pt1_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_1'>通过</button>
-    <div id='div_pt1_1' class="collapse">  -->
+    <button id='btn_ft1_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_1'>错误</button>
+    <div id='div_ft1_1' class="collapse">  -->
     <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt1_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_1'>通过</button>
-    <div id='div_pt1_1' class="collapse in" align="left">
+    <button id='btn_ft1_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft1_1'>错误</button>
+    <div id='div_ft1_1' class="collapse in" align="left">
     <pre>
     
-pt1_1: 
-测试用例编号:1
-测试功能模块:login
-测试用例标题:正常登录，登录成功
-测试数据url:http://localhost:1080/cgi-bin/login.pl
-测试数据data:{'username': 'test1', 'login.y': 3, 'userSession': '130794.270311867zHcHHDApcHQVzzzHtADzzpDiVzHf', 'login': 'Login', 'login.x': 25, 'JSFormSubmit': 'off', 'password': '123456'}
-测试数据method:post
-预期结果:login.pl?intro=true
-实际结果: login.pl?intro=true
+ft1_1: Traceback (most recent call last):
+  File "F:\demo\WebTours\TestCaseDDT.py", line 27, in setUp
+    self.data["userSession"] = userSession[0]  # 从响应中获取的值再塞入到data数据中
+AttributeError: 'TestCaseDDT' object has no attribute 'data'
 
 
     </pre>
@@ -184,26 +179,21 @@ pt1_1:
     </td>
 </tr>
 
-<tr id='pt1_2' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_api</div></td>
+<tr id='ft1_2' class='none'>
+    <td class='errorCase'><div class='testcase'>test_api_2</div></td>
     <td colspan='5' align='center'>
     <!--默认收起错误信息 -Findyou
-    <button id='btn_pt1_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_2'>通过</button>
-    <div id='div_pt1_2' class="collapse">  -->
+    <button id='btn_ft1_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_2'>错误</button>
+    <div id='div_ft1_2' class="collapse">  -->
     <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt1_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_2'>通过</button>
-    <div id='div_pt1_2' class="collapse in" align="left">
+    <button id='btn_ft1_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft1_2'>错误</button>
+    <div id='div_ft1_2' class="collapse in" align="left">
     <pre>
     
-pt1_2: 
-测试用例编号:2
-测试功能模块:login
-测试用例标题:密码错误，登录失败
-测试数据url:http://localhost:1080/cgi-bin/login.pl
-测试数据data:{'username': 'test1', 'login.y': 3, 'userSession': '130794.270635885zHcHHDApcQfiDDDDtADzzpDiVHHf', 'login': 'Login', 'login.x': 25, 'JSFormSubmit': 'off', 'password': '123457'}
-测试数据method:post
-预期结果:error.pl?error=badPassword
-实际结果: error.pl?error=badPassword
+ft1_2: Traceback (most recent call last):
+  File "F:\demo\WebTours\TestCaseDDT.py", line 27, in setUp
+    self.data["userSession"] = userSession[0]  # 从响应中获取的值再塞入到data数据中
+AttributeError: 'TestCaseDDT' object has no attribute 'data'
 
 
     </pre>
@@ -211,26 +201,21 @@ pt1_2:
     </td>
 </tr>
 
-<tr id='pt1_3' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_api</div></td>
+<tr id='ft1_3' class='none'>
+    <td class='errorCase'><div class='testcase'>test_api_3</div></td>
     <td colspan='5' align='center'>
     <!--默认收起错误信息 -Findyou
-    <button id='btn_pt1_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_3'>通过</button>
-    <div id='div_pt1_3' class="collapse">  -->
+    <button id='btn_ft1_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_3'>错误</button>
+    <div id='div_ft1_3' class="collapse">  -->
     <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt1_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_3'>通过</button>
-    <div id='div_pt1_3' class="collapse in" align="left">
+    <button id='btn_ft1_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft1_3'>错误</button>
+    <div id='div_ft1_3' class="collapse in" align="left">
     <pre>
     
-pt1_3: 
-测试用例编号:3
-测试功能模块:login
-测试用例标题:账号错误，登录失败
-测试数据url:http://localhost:1080/cgi-bin/login.pl
-测试数据data:{'username': 'test11', 'login.y': 3, 'userSession': '130794.270959903zHcHHDApDVcftADzzpDiViHf', 'login': 'Login', 'login.x': 25, 'JSFormSubmit': 'off', 'password': '123456'}
-测试数据method:post
-预期结果:error.pl?error=badPassword
-实际结果: error.pl?error=badPassword
+ft1_3: Traceback (most recent call last):
+  File "F:\demo\WebTours\TestCaseDDT.py", line 27, in setUp
+    self.data["userSession"] = userSession[0]  # 从响应中获取的值再塞入到data数据中
+AttributeError: 'TestCaseDDT' object has no attribute 'data'
 
 
     </pre>
@@ -241,10 +226,10 @@ pt1_3:
 <tr id='total_row' class="text-center active">
     <td>总计</td>
     <td>3</td>
+    <td>0</td>
+    <td>0</td>
     <td>3</td>
-    <td>0</td>
-    <td>0</td>
-    <td>通过率：100.00%</td>
+    <td>通过率：0.00%</td>
 </tr>
 </table>
 
