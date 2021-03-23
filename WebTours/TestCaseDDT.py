@@ -49,8 +49,11 @@ class TestCaseDDT(unittest.TestCase):
         print("实际结果:", login_str)
         try:
             self.assertEqual(login_str, dict_data["expected"],msg="fail")
-            data_sheet.updateResultData(dict_data["testcase_id"]+1,"pass")
 
+            if login_str == dict_data["expected"]:
+                data_sheet.updateResultData(dict_data["testcase_id"]+1,"pass")
+            else:
+                data_sheet.updateResultData(dict_data["testcase_id"] + 1, "fail")
         except AssertionError as e:
             print("出现异常：", e)
             raise e
