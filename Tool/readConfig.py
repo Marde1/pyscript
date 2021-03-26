@@ -33,15 +33,21 @@ class ReadConfig:
 
     def get_value_list(self):
         section_list = self.cf.sections()
-        print(section_list)
+        # print(section_list)
         list_value = []
-        section_dict = {}
+        all_section_dict = {}
         for i in section_list:
-            print(i)
-            opiton_list = self.cf.options(i)
-            dict01 = {}
-            for i in opiton_list:
-                dict01[i] = self.cf.get(i, i)
+            print(self.get_value_dict(i))
+            # print(i)
+            # opiton_list = self.cf.options(i)
+            # print(i)
+            # print(opiton_list)
+            value_dict = {}
+            # for j in opiton_list:
+            #     print(j)
+            #     print(i,j)
+            #     value_dict[i] = self.cf.get(i, j)
+            # print(value_dict)
             # section_dict[i] = dict01
             # print(section_dict)
         # list_value.append(section_list)
@@ -49,6 +55,6 @@ class ReadConfig:
 
 if __name__ == "__main__":
     rc = ReadConfig("F:\demo\config.ini")
-    print(rc.get_value_str("loggers","keys"))
-    print(rc.get_value_dict("logger_root"))
+    # print(rc.get_value_str("loggers","keys"))
+    # print(rc.get_value_dict("logger_root"))
     rc.get_value_list()
