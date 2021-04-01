@@ -6,7 +6,7 @@ class ReadConfig:
 
     def __init__(self,filename):
         self.filename = filename
-        self.cf = configparser.ConfigParser()
+        self.cf = configparser.RawConfigParser()
         self.cf.read(self.filename,encoding='utf-8')
 
     def get_value_str(self,section,option):
@@ -28,7 +28,8 @@ class ReadConfig:
         opiton_list = self.cf.options(section)
         dict01 = {}
         for i in opiton_list:
-            dict01[i] = self.cf.get(section,i)
+            option_str = self.cf.get(section,i)
+            dict01[i] = option_str
         return dict01
 
     def get_value_list(self):
@@ -42,7 +43,7 @@ class ReadConfig:
             # opiton_list = self.cf.options(i)
             # print(i)
             # print(opiton_list)
-            value_dict = {}
+            # value_dict = {}
             # for j in opiton_list:
             #     print(j)
             #     print(i,j)
@@ -55,6 +56,6 @@ class ReadConfig:
 
 if __name__ == "__main__":
     rc = ReadConfig("F:\demo\config.ini")
-    # print(rc.get_value_str("loggers","keys"))
+    print(rc.get_value_str("formatter_form01","format"))
     # print(rc.get_value_dict("logger_root"))
     rc.get_value_list()
